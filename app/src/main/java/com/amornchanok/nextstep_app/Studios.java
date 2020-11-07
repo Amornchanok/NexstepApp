@@ -2,12 +2,12 @@ package com.amornchanok.nextstep_app;
 
 public class Studios {
     private String id;
-    private String name;
+    private String stdname;
     private String location;
 
-    public Studios(String id, String name, String location) {
+    public Studios(String id, String stdname, String location) {
         this.id = id;
-        this.name = name;
+        this.stdname = stdname;
         this.location = location;
     }
 
@@ -19,12 +19,12 @@ public class Studios {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getStdname() {
+        return stdname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStdname(String stdname) {
+        this.stdname = stdname;
     }
 
     public String getLocation() {
@@ -32,11 +32,6 @@ public class Studios {
     }
 
     public void setLocation(String location) {
-        this.name = location;
-    }
-
-    public Studios(String name, String location) {
-        this.name = name;
         this.location = location;
     }
 
@@ -44,6 +39,6 @@ public class Studios {
     }
 
     public String toString() {
-        return this.id + " " + this.name + " " + location;
+        return stdname + " " + location;
     }
 }

@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
 
 
     <ImageView
@@ -28,6 +28,8 @@
             android:layout_height="80dp"
             android:drawableTop="@drawable/icon_mainservice01"
             android:text="ห้องซ้อมเต้น"
+            android:textSize="17dp"
+            android:textColor="@android:color/black"
             android:layout_margin="5dp"
             android:layout_weight="2"
             android:id="@+id/bt_service1"
@@ -42,6 +44,8 @@
             android:layout_height="80dp"
             android:drawableTop="@drawable/icon_mainservice02"
             android:text="เรียนเต้น"
+            android:textSize="17dp"
+            android:textColor="@android:color/black"
             android:layout_margin="5dp"
             android:layout_weight="2"
             android:id="@+id/bt_service2"
@@ -56,9 +60,34 @@
             android:layout_height="80dp"
             android:drawableTop="@drawable/icon_mainservice03"
             android:text="การแข่งขัน"
+            android:textSize="17dp"
+            android:textColor="@android:color/black"
             android:layout_margin="5dp"
             android:layout_weight="2"
             android:id="@+id/bt_service4"
+            android:padding="15dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Advertise Contest"
+            android:textSize="17dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
             android:padding="15dp"
             android:background="@drawable/rounded_corners"
             android:fontFamily="@font/db_adman_x"
@@ -72,14 +101,102 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
         </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ห้องซ้อมเต้นและการเรียนแนะนำ"
+            android:textSize="25dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/db_adman_x">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="Recommend list01"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:padding="15dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/db_adman_x"
+                android:shadowColor="@color/purple"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="Recommend list02"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:padding="15dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/db_adman_x"
+                android:shadowColor="@color/purple"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="โปรโมชันมาแรง"
+            android:textSize="25dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/db_adman_x">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="Promotion list01"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:padding="15dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/db_adman_x"
+                android:shadowColor="@color/purple"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="Promotion list02"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:padding="15dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/db_adman_x"
+                android:shadowColor="@color/purple"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 

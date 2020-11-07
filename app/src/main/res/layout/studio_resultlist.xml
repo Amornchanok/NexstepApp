@@ -8,10 +8,20 @@
     tools:context=".StudioList">
 
 
-    <ListView
-        android:id="@+id/listviewtxt"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="510dp"
-        android:layout_alignParentTop="true"></ListView>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ListView
+            android:id="@+id/listviewtxt"
+            android:layout_width="match_parent"
+            android:layout_height="510dp"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/db_adman_x">
+        </ListView>
+
+    </LinearLayout>
 
 </LinearLayout>
