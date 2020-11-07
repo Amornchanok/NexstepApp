@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-110dp"
+        android:src="@drawable/img_header01"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-85dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical"
+        android:src="@drawable/rounded_corners">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_picker"
+            android:gravity="left"
+            android:drawableLeft="@drawable/icon_search_lct01"
+            android:fontFamily="@font/db_adman_x"
+            android:textSize="20dp"
+            android:hint="  เลือกตำแหน่ง" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_date"
+            android:gravity="left"
+            android:drawableLeft="@drawable/icon_search_lct02"
+            android:fontFamily="@font/db_adman_x"
+            android:textSize="20dp"
+            android:hint="  วันที่"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_time"
+            android:gravity="left"
+            android:drawableLeft="@drawable/icon_search_lct03"
+            android:fontFamily="@font/db_adman_x"
+            android:textSize="20dp"
+            android:hint="  เวลา"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/icon_search_lct04"
+            android:fontFamily="@font/db_adman_x"
+            android:textSize="20dp"
+            android:hint="  จำนวนคน"
+            android:layout_margin="5dp"
+            android:id="@+id/input_person"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="ค้นหา"
+                android:id="@+id/bt_search"
+                android:fontFamily="@font/db_adman_x"
+                android:textSize="20dp">
+            </Button>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/text_view"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
