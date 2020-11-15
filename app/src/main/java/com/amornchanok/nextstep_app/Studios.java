@@ -4,6 +4,8 @@ public class Studios {
     private String id;
     private String stdname;
     private String location;
+    String imageUrl;
+    String text;
 
     public Studios(String id, String stdname, String location) {
         this.id = id;
@@ -40,5 +42,21 @@ public class Studios {
 
     public String toString() {
         return stdname + " " + location;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }
