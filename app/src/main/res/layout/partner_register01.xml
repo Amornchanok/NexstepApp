@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-110dp"
+        android:src="@drawable/img_header01"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ขั้นตอนที่ 1 กรอกข้อมูลส่วนตัว"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:background="@color/purple"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ชื่อ"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:id="@+id/edt_firstname"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="นามสกุล"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:id="@+id/edt_lastname"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="อีเมล"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            android:id="@+id/edt_email"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="รหัสผ่าน"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            android:inputType="number"
+            android:id="@+id/edt_password"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="เบอร์โทรศัพท์"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            android:inputType="number"
+            android:id="@+id/edt_phone"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ส่ง"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="กรุณากรอกรหัส OTP ที่ได้รับทาง SMS"
+            android:textSize="20dp"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/db_adman_x">
+
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="รหัส OTP"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            android:inputType="number"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="กดที่นี่หากคุณยังไม่ได้รับรหัสภายใน 2 นาที"
+            android:textSize="17dp"
+            android:textColor="@color/purple"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:background="@color/white"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="สร้างบัญชีพาร์ทเนอร์"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:background="@color/purple"
+            android:visibility="invisible"
+            />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
