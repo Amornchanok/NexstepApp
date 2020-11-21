@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Register">
+    tools:context=".HomeActivity">
 
 
     <ImageView
@@ -24,19 +24,6 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ขั้นตอนที่ 1 กรอกข้อมูลส่วนตัว"
-            android:textSize="17dp"
-            android:textColor="@android:color/white"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:padding="15dp"
-            android:background="@color/purple"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
-            />
 
     </LinearLayout>
 
@@ -47,34 +34,6 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ชื่อ"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:id="@+id/edt_firstname"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
-
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="นามสกุล"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:id="@+id/edt_lastname"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
-            />
 
     </LinearLayout>
 
@@ -134,21 +93,6 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="เบอร์โทรศัพท์"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
-            android:inputType="number"
-            android:id="@+id/edt_phone"
-            />
-
 
     </LinearLayout>
 
@@ -158,21 +102,6 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/reg_partner"
-            android:buttonTint="@color/purple"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="พาร์ทเนอร์"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:fontFamily="@font/db_adman_x">
-        </TextView>
 
     </LinearLayout>
 
@@ -181,22 +110,6 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/reg_user"
-            android:buttonTint="@color/purple"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ผู้ใช้ทั่วไป"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:fontFamily="@font/db_adman_x">
-        </TextView>
 
     </LinearLayout>
 
@@ -210,21 +123,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="สร้างบัญชีพาร์ทเนอร์"
-            android:textSize="17dp"
-            android:textColor="@color/white"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:background="@color/purple"
-            android:id="@+id/bt_regPartner"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ลงชื่อเข้าสู่ระบบ"
+            android:text="ลงชื่อเข้าใช้"
             android:textSize="17dp"
             android:textColor="@color/white"
             android:layout_margin="5dp"
@@ -235,7 +134,19 @@
             android:id="@+id/bt_login"
             />
 
-
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="สร้างบัญชีพาร์ทเนอร์"
+                    android:textSize="17dp"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:padding="15dp"
+                    android:fontFamily="@font/db_adman_x"
+                    android:background="@color/purple"
+                    android:id="@+id/bt_regPartner"
+                    />
 
     </LinearLayout>
 

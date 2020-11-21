@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConditionPartner">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +23,8 @@
             android:name=".StudioList"
             android:parentActivityName=".SearchRoom" />
 
+        <activity android:name=".Register" />
+        <activity android:name=".RegisterPartner01" />
     </application>
 
 </manifest>
