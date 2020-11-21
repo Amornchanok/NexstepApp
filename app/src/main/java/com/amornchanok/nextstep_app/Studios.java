@@ -4,13 +4,13 @@ public class Studios {
     private String id;
     private String stdname;
     private String location;
-    String imageUrl;
-    String text;
+    private String score;
 
-    public Studios(String id, String stdname, String location) {
+    public Studios(String id, String stdname, String location ,String score) {
         this.id = id;
         this.stdname = stdname;
         this.location = location;
+        this.score = score;
     }
 
     public String getId() {
@@ -25,9 +25,7 @@ public class Studios {
         return stdname;
     }
 
-    public void setStdname(String stdname) {
-        this.stdname = stdname;
-    }
+    public void setStdname(String stdname) { this.stdname = stdname; }
 
     public String getLocation() {
         return location;
@@ -37,6 +35,16 @@ public class Studios {
         this.location = location;
     }
 
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+
+
     public Studios() {
     }
 
@@ -44,19 +52,5 @@ public class Studios {
         return stdname + " " + location;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
 }

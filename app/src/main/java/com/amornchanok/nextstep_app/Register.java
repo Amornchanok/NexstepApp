@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +26,8 @@ import java.util.Map;
 public class Register extends AppCompatActivity {
     EditText edt_firstname,edt_lastname,edt_email,edt_password,edt_phone;
     Button bt_regPartner,bt_login;
+    RadioButton reg_partner,reg_user;
+    int i = 0;
     boolean valid = true;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -44,6 +47,8 @@ public class Register extends AppCompatActivity {
         edt_phone = findViewById(R.id.edt_phone);
         bt_regPartner = findViewById(R.id.bt_regPartner);
         bt_login = findViewById(R.id.bt_login);
+        reg_partner = findViewById(R.id.reg_partner);
+        reg_user = findViewById(R.id.reg_user);
 
 
         bt_regPartner.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +74,11 @@ public class Register extends AppCompatActivity {
                     userinfo.put("UserEmail",edt_email.getText().toString());
                     userinfo.put("PhoneNumber",edt_phone.getText().toString());
 
-                    userinfo.put("isPartner","1");
+                    if  (reg_partner.isChecked()) {
+                        userinfo.put("isPartner","1");
+                    }else if (reg_user.isChecked()) {
+                        userinfo.put("isUser", "0");
+                    }
                     df.set(userinfo);
 
                     startActivity(new Intent(getApplicationContext(),RegisterPartner01.class));
