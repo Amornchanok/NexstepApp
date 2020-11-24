@@ -15,16 +15,21 @@
         android:src="@drawable/img_header01"
         />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-85dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:orientation="vertical"
-        android:src="@drawable/rounded_corners">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-85dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/rounded_corners">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+                
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +38,8 @@
             android:drawableLeft="@drawable/icon_search_lct01"
             android:fontFamily="@font/db_adman_x"
             android:textSize="20dp"
-            android:hint="  เลือกตำแหน่ง" />
+            android:hint="  เลือกตำแหน่ง"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:layout_width="match_parent"
@@ -43,7 +49,8 @@
             android:drawableLeft="@drawable/icon_search_lct02"
             android:fontFamily="@font/db_adman_x"
             android:textSize="20dp"
-            android:hint="  วันที่"/>
+            android:hint="  วันที่"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:layout_width="match_parent"
@@ -66,6 +73,9 @@
             android:id="@+id/input_person"
             android:inputType="number"/>
 
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,9 +89,6 @@
                 android:fontFamily="@font/db_adman_x"
                 android:textSize="20dp">
             </Button>
-
-        </LinearLayout>
-
 
     </LinearLayout>
 

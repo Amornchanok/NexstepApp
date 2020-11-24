@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.amornchanok.nextstep_app.StudioHome.StudioHomeActivity;
+
 public class SearchRoom extends AppCompatActivity {
     private Button bt_search;
 
@@ -23,7 +25,7 @@ public class SearchRoom extends AppCompatActivity {
         });
     }
     public void openSearchroomList() {
-        Intent intent = new Intent(this, StudioList.class);
+        Intent intent = new Intent(SearchRoom.this, StudioHomeActivity.class);
         startActivity(intent);
 
     }
