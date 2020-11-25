@@ -20,11 +20,4 @@ public class Convenient {
         this.pic = pic;
     }
 
-    @Override
-    public String toString() {
-        return "Convenient{" +
-                "name='" + name + '\'' +
-                ", pic='" + pic + '\'' +
-                '}';
-    }
 }

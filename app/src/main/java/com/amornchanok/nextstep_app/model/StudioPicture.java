@@ -29,13 +29,4 @@ public class StudioPicture {
     public void setProfile(ArrayList<String> profile) {
         this.profile = profile;
     }
-
-    @Override
-    public String toString() {
-        return "StudioPicture{" +
-                "logo='" + logo + '\'' +
-                ", preview='" + preview + '\'' +
-                ", profile=" + profile.toString() +
-                '}';
-    }
 }

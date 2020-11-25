@@ -1,6 +1,9 @@
 package com.amornchanok.nextstep_app.model;
 
 public class TimeService {
+    private String on;
+    private String close;
+
     public String getOn() {
         return on;
     }
@@ -17,14 +20,4 @@ public class TimeService {
         this.close = close;
     }
 
-    private String on;
-    private String close;
-
-    @Override
-    public String toString() {
-        return "TimeService{" +
-                "on='" + on + '\'' +
-                ", close='" + close + '\'' +
-                '}';
-    }
 }

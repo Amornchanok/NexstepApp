@@ -38,13 +38,4 @@ public class StudioLocation {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "StudioLocation{" +
-                "name='" + name + '\'' +
-                ", lat='" + lat + '\'' +
-                ", lng='" + lng + '\'' +
-                ", address='" + address + '\'' +
-                '}';
-    }
 }

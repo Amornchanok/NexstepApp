@@ -22,11 +22,4 @@ public class StudioInfo {
         this.timeService = timeService;
     }
 
-    @Override
-    public String toString() {
-        return "StudioInfo{" +
-                "convenients=" + convenients.toString() +
-                ", timeService=" + timeService +
-                '}';
-    }
 }

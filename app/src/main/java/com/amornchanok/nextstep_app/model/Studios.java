@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Studios {
     private String id;
+    private String studioname;
     private StudioInfo info;
     private StudioPicture pic;
     private StudioType type;
@@ -19,6 +20,10 @@ public class Studios {
     public void setId(String id) {
         this.id = id;
     }
+
+    public String getStudioname() { return studioname; }
+
+    public void setStudioname(String studioname) { this.studioname = studioname; }
 
     public StudioInfo getInfo() {
         return info;

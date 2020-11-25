@@ -20,11 +20,4 @@ public class StudioType {
         this.tag = tag;
     }
 
-    @Override
-    public String toString() {
-        return "StudioType{" +
-                "name='" + name + '\'' +
-                ", tag='" + tag + '\'' +
-                '}';
-    }
 }
