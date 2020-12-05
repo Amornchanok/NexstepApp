@@ -28,6 +28,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
         android:id="@+id/studiopic"/>
 
 </LinearLayout>
@@ -41,7 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/studioname"
-        android:fontFamily="@font/db_adman_x"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:layout_weight="1"
@@ -51,7 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/studioprice"
-        android:fontFamily="@font/db_adman_x"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:layout_weight="1"
@@ -68,7 +67,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/studioscore"
-                android:fontFamily="@font/db_adman_x"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:text="4.3 (125 รีวิว)"
@@ -76,10 +74,9 @@
                 android:gravity="left"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_studiobook"
-                android:fontFamily="@font/db_adman_x"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:id="@+id/bt_stdbook"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 android:layout_weight="1"

@@ -9,6 +9,8 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.amornchanok.nextstep_app.partnerRegister.PartnerRegisterProfileActivity;
+
 public class Login extends AppCompatActivity {
     EditText edt_email,edt_password;
     Button bt_regPartner , bt_login;
@@ -27,7 +29,7 @@ public class Login extends AppCompatActivity {
         bt_regPartner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Register.class));
+                startActivity(new Intent(getApplicationContext(), PartnerRegisterProfileActivity.class));
             }
         });
     }

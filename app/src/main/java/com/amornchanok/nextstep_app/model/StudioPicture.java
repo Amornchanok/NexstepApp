@@ -6,6 +6,7 @@ public class StudioPicture {
     private String logo;
     private String preview;
     private ArrayList <String> profile;
+
     public String getLogo() {
         return logo;
     }

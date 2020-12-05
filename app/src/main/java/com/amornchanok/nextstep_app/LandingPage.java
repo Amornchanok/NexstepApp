@@ -11,6 +11,8 @@ import android.widget.VideoView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.amornchanok.nextstep_app.partnerRegister.PartnerConditionActivity;
+
 public class LandingPage extends AppCompatActivity {
 
     Button bt_start;
@@ -43,7 +45,7 @@ public class LandingPage extends AppCompatActivity {
     }
 
     public void openConditionPartner() {
-        Intent VdoLanding = new Intent(LandingPage.this,ConditionPartner.class);
+        Intent VdoLanding = new Intent(LandingPage.this, PartnerConditionActivity.class);
         VdoLanding.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(VdoLanding);
     }

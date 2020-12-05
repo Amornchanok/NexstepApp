@@ -6,20 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Register">
+    tools:context=".partnerRegister.PartnerRegisterProfileActivity">
 
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-110dp"
-        android:src="@drawable/img_header01"
-        />
+        android:src="@drawable/img_header01" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="-100dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="ขั้นตอนที่ 1 กรอกข้อมูลส่วนตัว"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:padding="15dp"
+            android:background="@color/purple"
+            android:shadowColor="@color/purple" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-75dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
@@ -33,8 +45,6 @@
             android:layout_weight="2"
             android:id="@+id/edt_firstname"
             android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
             android:inputType="text"
             android:background="@drawable/rounded_input"/>
 
@@ -48,8 +58,6 @@
             android:layout_weight="2"
             android:id="@+id/edt_lastname"
             android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
             android:inputType="text"
             android:background="@drawable/rounded_input"/>
 
@@ -58,7 +66,40 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="วันเกิด"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:id="@+id/sp_calender"
+            android:padding="15dp"
+            android:inputType="text"
+            android:background="@drawable/rounded_input"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="เพศ"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:id="@+id/sp_gender"
+            android:padding="15dp"
+            android:inputType="text"
+            android:background="@drawable/rounded_input"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
@@ -71,112 +112,12 @@
             android:layout_margin="5dp"
             android:layout_weight="2"
             android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
             android:shadowColor="@color/purple"
             android:id="@+id/edt_email"
             android:inputType="text"
             android:background="@drawable/rounded_input"/>
-
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="รหัสผ่าน"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
-            android:inputType="number"
-            android:id="@+id/edt_password"
-            android:background="@drawable/rounded_input" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="เบอร์โทรศัพท์"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
-            android:inputType="number"
-            android:id="@+id/edt_phone"
-            android:background="@drawable/rounded_input" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/reg_partner"
-            android:buttonTint="@color/purple"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="พาร์ทเนอร์"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:fontFamily="@font/db_adman_x">
-        </TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/reg_user"
-            android:buttonTint="@color/purple"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ผู้ใช้ทั่วไป"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:fontFamily="@font/db_adman_x">
-        </TextView>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -185,10 +126,49 @@
         android:layout_marginLeft="25dp"
         android:orientation="vertical">
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="รหัสผ่าน"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            android:inputType="number"
+            android:id="@+id/edt_password"
+            android:background="@drawable/rounded_input" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ยืนยันรหัสผ่าน"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:padding="15dp"
+            android:fontFamily="@font/db_adman_x"
+            android:shadowColor="@color/purple"
+            android:inputType="number"
+            android:id="@+id/edt_cfpassword"
+            android:background="@drawable/rounded_input" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:orientation="vertical">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="สร้างบัญชีพาร์ทเนอร์"
+            android:text="ต่อไป"
             android:textSize="17dp"
             android:textColor="@color/white"
             android:layout_margin="5dp"
@@ -196,23 +176,9 @@
             android:padding="15dp"
             android:fontFamily="@font/db_adman_x"
             android:background="@drawable/gradient_button"
-            android:id="@+id/bt_regPartner"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ลงชื่อเข้าสู่ระบบ"
-            android:textSize="17dp"
-            android:textColor="@color/white"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:background="@color/purple"
-            android:id="@+id/bt_login"
+            android:id="@+id/bt_regPartner_next"
             />
 
     </LinearLayout>
 
-</LinearLayout>
+    </LinearLayout>

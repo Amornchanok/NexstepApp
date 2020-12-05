@@ -34,7 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/white"
-        android:fontFamily="@font/db_adman_x"
         android:text="เริ่ม"
         android:textColor="@color/purple"
         android:textSize="25dp"></Button>
