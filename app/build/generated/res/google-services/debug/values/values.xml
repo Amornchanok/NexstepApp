@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">879933951310-kkcbkmn6qbgtncgb187j8gd9jdc6tvgf.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://nextstepapp-740cf.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">879933951310</string>
+    <string name="google_api_key" translatable="false">AIzaSyBc9r08sGPWjt-YQKs8463PIbxPe7uUoMI</string>
+    <string name="google_app_id" translatable="false">1:879933951310:android:984c4d62ef9fa3f2ea221f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBc9r08sGPWjt-YQKs8463PIbxPe7uUoMI</string>
+    <string name="google_storage_bucket" translatable="false">nextstepapp-740cf.appspot.com</string>
+    <string name="project_id" translatable="false">nextstepapp-740cf</string>
+</resources>

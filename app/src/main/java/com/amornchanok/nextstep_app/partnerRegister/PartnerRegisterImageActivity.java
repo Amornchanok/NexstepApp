@@ -47,7 +47,7 @@ public class PartnerRegisterImageActivity extends AppCompatActivity {
 
         ImageView imageView;
         Glide.with(this /* context */)
-                .load(storageRef.child("imgPartnerFirstnameLastname.png"))
+                .load(storageRef.child("imgPartnerxxxx.png"))
                 .into(imgPartner);
         imgPartner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,7 +116,7 @@ public class PartnerRegisterImageActivity extends AppCompatActivity {
         }
     }
     private void uploadImage(byte[] bytes) {
-        UploadTask uploadTask = storageRef.child("imgPartnerFirstnameLastname.png").putBytes(bytes);
+        UploadTask uploadTask = storageRef.child("imgPartnerxxxx.png").putBytes(bytes);
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {

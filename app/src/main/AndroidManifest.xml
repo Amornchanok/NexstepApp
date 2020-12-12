@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".partnerRegister.PartnerRegisterImageActivity">
+        <activity android:name=".partnerRegister.PartnerRegisterProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,8 +20,8 @@
         <activity android:name=".SearchRoom" android:parentActivityName=".HomeActivity" />
         <activity android:name=".StudioHome.StudioHomeActivity" android:parentActivityName=".SearchRoom" />
 <!--        <activity android:name=".ConditionPartner" />-->
-        <activity android:name=".partnerRegister.PartnerRegisterProfileActivity" />
-<!--        <activity android:name=".partnerRegister.PartnerRegisterImageActivity" />-->
+<!--    <activity android:name=".partnerRegister.PartnerRegisterProfileActivity" />-->
+        <activity android:name=".partnerRegister.PartnerRegisterImageActivity" />
         <activity android:name=".partnerRegister.PartnerRegisterOtpActivity" />
     </application>
 
