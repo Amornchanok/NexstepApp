@@ -106,9 +106,9 @@
             android:layout_marginTop="10dp"
             android:textSize="20dp"
             android:text="ตารางการจองห้อง"
+            android:id="@+id/bt_calendarbook"
             android:background="@drawable/rounded_score">
         </Button>
-
     </LinearLayout>
 
     <LinearLayout

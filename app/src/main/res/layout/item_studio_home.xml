@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/studioprice"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25dp"
         android:layout_weight="1"
         android:gravity="right"/>
@@ -69,8 +69,9 @@
                 android:id="@+id/studioscore"
                 android:drawableLeft="@drawable/icon_search_lct01"
                 android:paddingTop="20dp"
+                android:textColor="@color/purple"
                 android:textSize="20dp"
-                android:text=""
+                android:text=" location"
                 android:layout_weight="3"
                 android:gravity="left"/>
 
@@ -93,16 +94,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/gradient_button"
-            android:textSize="17dp"
-            android:textColor="@color/white"
-            android:text="โปรไฟล์"
-            android:id="@+id/btProfieStudio">
-        </Button>
 
 
     </LinearLayout>

@@ -6,13 +6,44 @@
     tools:context=".tabProfile.ReviewStudioFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        android:text="รีวิว"/>
+        android:layout_marginRight="55dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="@color/purple"
+            android:paddingTop="10dp"
+            android:text="ชื่อผู้ใช้งาน" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/gray"
+            android:text="10/12/2563" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:paddingTop="10dp"
+            android:text="ดือมาก แอร์เย็นฉ่ำซ้อมแล้วไม่เหนอะหนะตัว เครื่องเสียงก็กระหึ่มค่า
+ซ้อมเสร็จยังใกล้ตลาดอีก มาซ้อมที่นี่อีกแน่นอน" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"/>
+
+
+    </LinearLayout>
 
 </FrameLayout>

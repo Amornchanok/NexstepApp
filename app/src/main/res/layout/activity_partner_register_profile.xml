@@ -25,8 +25,7 @@
             android:textSize="17dp"
             android:textColor="@android:color/white"
             android:padding="15dp"
-            android:background="@color/purple"
-            android:shadowColor="@color/purple" />
+            android:background="@color/purple"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,14 +81,15 @@
             android:inputType="text"
             android:background="@drawable/rounded_input"/>
 
-        <Spinner
-            android:id="@+id/spGender"
+        <EditText
+            android:id="@+id/edt_gender"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textColor="@android:color/black"
             android:layout_margin="5dp"
             android:layout_weight="2"
             android:padding="15dp"
+            android:hint="เพศ"
             android:background="@drawable/rounded_input" />
 
     </LinearLayout>
@@ -137,7 +137,6 @@
             android:id="@+id/edt_password"
             android:background="@drawable/rounded_input" />
 
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -172,9 +171,8 @@
             android:layout_weight="2"
             android:padding="15dp"
             android:fontFamily="@font/db_adman_x"
-            android:background="@drawable/rounded_btnoactive"
-            android:id="@+id/bt_regPartner_next"
-            />
+            android:background="@drawable/gradient_button"
+            android:id="@+id/bt_regPartner_next" />
 
     </LinearLayout>
 

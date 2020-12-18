@@ -8,20 +8,23 @@
     android:orientation="vertical"
     tools:context=".partnerRegister.PartnerConditionActivity">
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-110dp"
-        android:src="@drawable/img_header01"
-        />
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/topbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/img_partner"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -29,13 +32,9 @@
             android:layout_height="80dp"
             android:text="สมัครเป็นพาร์ทเนอร์กับเรา"
             android:textSize="25dp"
+            android:layout_marginTop="-80dp"
             android:textColor="@color/purple"
-            android:layout_margin="5dp"
-            android:layout_weight="2"
-            android:padding="15dp"
-            android:fontFamily="@font/db_adman_x"
-            android:shadowColor="@color/purple"
-            />
+            android:shadowColor="@color/purple" />
 
     </LinearLayout>
 
@@ -116,7 +115,6 @@
 
         </LinearLayout>
 
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -126,9 +124,8 @@
                 android:layout_margin="5dp"
                 android:layout_weight="2"
                 android:padding="15dp"
-                android:background="@color/purple"
+                android:background="@drawable/gradient_button"
                 android:visibility="invisible"
-                android:fontFamily="@font/db_adman_x"
                 android:id="@+id/bt_pnstart"
                 />
 

@@ -11,7 +11,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:background="@drawable/topbar"
         android:layout_marginBottom="10dp"/>
 
@@ -57,20 +57,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp">
+        android:layout_marginRight="10dp">
 
-        <Button
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="170dp"
             android:text="Advertise Contest"
             android:textSize="17dp"
             android:textColor="@android:color/black"
-            android:layout_margin="5dp"
             android:layout_weight="2"
-            android:padding="15dp"
-            android:background="@drawable/rounded_corners"
+            android:background="@drawable/banner_1"
             android:shadowColor="@color/purple"
             />
 
@@ -105,27 +101,25 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:text="Recommend list01"
                 android:textSize="17dp"
                 android:textColor="@android:color/black"
                 android:layout_margin="5dp"
                 android:layout_weight="2"
                 android:padding="15dp"
-                android:background="@drawable/rounded_corners"
-                android:shadowColor="@color/purple" />
+                android:background="@color/gray" />
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:text="Recommend list02"
                 android:textSize="17dp"
                 android:textColor="@android:color/black"
                 android:layout_margin="5dp"
                 android:layout_weight="2"
                 android:padding="15dp"
-                android:background="@drawable/rounded_corners"
-                android:shadowColor="@color/purple" />
+                android:background="@color/gray" />
         </LinearLayout>
 
 
@@ -144,28 +138,26 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:text="Promotion list01"
                 android:textSize="17dp"
                 android:textColor="@android:color/black"
                 android:layout_margin="5dp"
                 android:layout_weight="2"
                 android:padding="15dp"
-                android:background="@drawable/rounded_corners"
-                android:shadowColor="@color/purple"
+                android:background="@color/gray"
                 />
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:text="Promotion list02"
                 android:textSize="17dp"
                 android:textColor="@android:color/black"
                 android:layout_margin="5dp"
                 android:layout_weight="2"
                 android:padding="15dp"
-                android:background="@drawable/rounded_corners"
-                android:shadowColor="@color/purple" />
+                android:background="@color/gray"/>
 
         </LinearLayout>
 

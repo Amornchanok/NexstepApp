@@ -17,8 +17,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class PartnerRegisterProfileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    EditText edt_firstname,edt_lastname,edt_email,edt_password,edt_phone;
-    Spinner spGender;
+    EditText edt_firstname,edt_lastname,edt_email,edt_password,edt_phone,edt_gender;
     Button bt_regPartnerNext,bt_login;
     int i = 0;
     boolean valid = true;
@@ -39,14 +38,14 @@ public class PartnerRegisterProfileActivity extends AppCompatActivity implements
         edt_password = findViewById(R.id.edt_password);
         edt_phone = findViewById(R.id.edt_phone);
         bt_regPartnerNext = findViewById(R.id.bt_regPartner_next);
-//        bt_login = findViewById(R.id.bt_login);
+//      bt_login = findViewById(R.id.bt_login);
 
-        spGender = (Spinner) findViewById(R.id.spGender);
+//      edt_gender = findViewById(R.id.edt_gender);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.gender_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spGender.setAdapter(adapter);
-        spGender.setOnItemSelectedListener(this);
+//        spGender.setAdapter(adapter);
+//        edt_gender.setOnItemSelectedListener(this);
 
 
         bt_regPartnerNext.setOnClickListener(new View.OnClickListener() {
