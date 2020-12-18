@@ -50,9 +50,9 @@ public class PartnerRegisterOtpActivity extends AppCompatActivity {
         btSendOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneNumber= "+66"+edt_phone.getText().toString();
-//                phoneNumber= "+66"+edt_phone.getText().toString().trim().substring(2);
-
+//                phoneNumber= "+66"+edt_phone.getText().toString();
+                phoneNumber= "+66"+edt_phone.getText().toString().trim().substring(1);
+                String f = phoneNumber;
                 PhoneAuthProvider.getInstance().verifyPhoneNumber(
                         phoneNumber,                     // Phone number to verify
                         60,                           // Timeout duration

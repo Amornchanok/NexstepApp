@@ -82,18 +82,15 @@
             android:inputType="text"
             android:background="@drawable/rounded_input"/>
 
-        <EditText
+        <Spinner
+            android:id="@+id/spGender"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="เพศ"
-            android:textSize="20dp"
+            android:layout_height="50dp"
             android:textColor="@android:color/black"
             android:layout_margin="5dp"
             android:layout_weight="2"
-            android:id="@+id/sp_gender"
             android:padding="15dp"
-            android:inputType="text"
-            android:background="@drawable/rounded_input"/>
+            android:background="@drawable/rounded_input" />
 
     </LinearLayout>
 
@@ -175,7 +172,7 @@
             android:layout_weight="2"
             android:padding="15dp"
             android:fontFamily="@font/db_adman_x"
-            android:background="@drawable/gradient_button"
+            android:background="@drawable/rounded_btnoactive"
             android:id="@+id/bt_regPartner_next"
             />
 

@@ -3,18 +3,23 @@ package com.amornchanok.nextstep_app.partnerRegister;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.amornchanok.nextstep_app.MyApplication;
 import com.amornchanok.nextstep_app.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
-public class PartnerRegisterProfileActivity extends AppCompatActivity {
+public class PartnerRegisterProfileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     EditText edt_firstname,edt_lastname,edt_email,edt_password,edt_phone;
+    Spinner spGender;
     Button bt_regPartnerNext,bt_login;
     int i = 0;
     boolean valid = true;
@@ -36,6 +41,13 @@ public class PartnerRegisterProfileActivity extends AppCompatActivity {
         edt_phone = findViewById(R.id.edt_phone);
         bt_regPartnerNext = findViewById(R.id.bt_regPartner_next);
 //        bt_login = findViewById(R.id.bt_login);
+
+        spGender = (Spinner) findViewById(R.id.spGender);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.gender_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spGender.setAdapter(adapter);
+        spGender.setOnItemSelectedListener(this);
 
 
         bt_regPartnerNext.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +113,7 @@ public class PartnerRegisterProfileActivity extends AppCompatActivity {
     }
 
     public boolean checkField(EditText textField) { {
-            if (textField.getText().toString().isEmpty()){
+            if (textField.getText().toString().trim().isEmpty()){
                 textField.setError("Error");
                 valid = false;
             }else{
@@ -109,5 +121,15 @@ public class PartnerRegisterProfileActivity extends AppCompatActivity {
             }
         }
         return valid;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
