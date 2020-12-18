@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
     public void openSearchroom() {
-        Intent intent = new Intent(this, SearchRoomActivity.class);
+        Intent intent = new Intent(HomeActivity.this, SearchRoomActivity.class);
         startActivity(intent);
     }
 }

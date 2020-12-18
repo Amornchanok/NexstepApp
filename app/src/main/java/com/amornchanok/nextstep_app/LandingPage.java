@@ -4,18 +4,17 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.VideoView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amornchanok.nextstep_app.partnerRegister.PartnerConditionActivity;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class LandingPage extends AppCompatActivity {
 
-    Button bt_start;
+    Timer timer;
     VideoView vdolanding;
 
     @Override
@@ -23,7 +22,15 @@ public class LandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing);
 
-        bt_start = (Button) findViewById(R.id.bt_start);
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(LandingPage.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        },5000);
+
         vdolanding = (VideoView) findViewById(R.id.vdolanding);
         String path ="android.resource://com.amornchanok.nextstep_app/"+R.raw.vdolanding;
         Uri u = Uri.parse(path);
@@ -36,19 +43,13 @@ public class LandingPage extends AppCompatActivity {
                 mp.setLooping(true);
             }
         });
-        bt_start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openConditionPartner();
-            }
-        });
     }
 
-    public void openConditionPartner() {
-        Intent VdoLanding = new Intent(LandingPage.this, PartnerConditionActivity.class);
-        VdoLanding.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(VdoLanding);
-    }
+//    public void openConditionPartner() {
+//        Intent VdoLanding = new Intent(LandingPage.this, HomeActivity.class);
+//        VdoLanding.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//        startActivity(VdoLanding);
+//    }
 
     @Override
     protected void onResume() {

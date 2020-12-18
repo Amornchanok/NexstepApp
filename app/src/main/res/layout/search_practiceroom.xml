@@ -8,17 +8,15 @@
     android:orientation="vertical"
     tools:context=".SearchRoom">
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-110dp"
-        android:src="@drawable/img_header01"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/topbar"
+        android:layout_marginBottom="10dp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-85dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/rounded_corners">
@@ -37,7 +35,6 @@
             android:id="@+id/bt_picker"
             android:gravity="left"
             android:drawableLeft="@drawable/icon_search_lct01"
-            android:fontFamily="@font/db_adman_x"
             android:paddingTop="20dp"
             android:textSize="20dp"
             android:hint="  เลือกตำแหน่ง"

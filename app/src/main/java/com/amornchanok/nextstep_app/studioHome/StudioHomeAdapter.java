@@ -1,5 +1,6 @@
-package com.amornchanok.nextstep_app.StudioHome;
+package com.amornchanok.nextstep_app.studioHome;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +9,12 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amornchanok.nextstep_app.HomeActivity;
 import com.amornchanok.nextstep_app.R;
+import com.amornchanok.nextstep_app.SearchRoom;
 import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.searchStudio.SearchRoomActivity;
+import com.amornchanok.nextstep_app.tabProfile.StudioProfileActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -34,12 +39,17 @@ public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.My
         holder.tvPrice.setText(studios.get(position).getPrice() + " บาท / ชั่วโมง" .toString());
         Picasso.get().load(studios.get(position).getPic().getPreview()).into(holder.ivPic);
 
-        holder.tvName.setOnClickListener(new View.OnClickListener() {
+        holder.ivPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                openProfileStudio();
             }
         });
+    }
+
+    public void openProfileStudio() {
+        Intent intent = new Intent( SearchRoom.this,StudioProfileActivity.class);
+        startActivity(intent);
     }
 
     @Override

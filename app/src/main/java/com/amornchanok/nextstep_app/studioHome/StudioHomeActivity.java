@@ -1,8 +1,7 @@
-package com.amornchanok.nextstep_app.StudioHome;
+package com.amornchanok.nextstep_app.studioHome;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;

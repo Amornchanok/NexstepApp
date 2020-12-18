@@ -67,27 +67,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/studioscore"
-                android:textColor="@color/black"
+                android:drawableLeft="@drawable/icon_search_lct01"
+                android:paddingTop="20dp"
                 android:textSize="20dp"
-                android:text="4.3 (125 รีวิว)"
+                android:text=""
                 android:layout_weight="3"
                 android:gravity="left"/>
 
-            <Button
-                android:layout_width="40dp"
-                android:layout_height="30dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/bt_stdbook"
                 android:textColor="@color/white"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:text="จอง"
+                android:text="4.5"
+                android:background="@drawable/rounded_score"
                 android:textAlignment="center"
-                android:background="@drawable/gradient_button"
                 tools:ignore="RtlCompat" />
 
-
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/gradient_button"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:text="โปรไฟล์"
+            android:id="@+id/btProfieStudio">
+        </Button>
 
 
     </LinearLayout>

@@ -11,7 +11,6 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amornchanok.nextstep_app.MyApplication;
 import com.amornchanok.nextstep_app.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;

@@ -3,7 +3,6 @@ package com.amornchanok.nextstep_app.searchStudio;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,18 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
-import com.amornchanok.nextstep_app.StudioHome.StudioHomeActivity;
-import com.amornchanok.nextstep_app.StudioHome.StudioHomeAdapter;
+import com.amornchanok.nextstep_app.studioHome.StudioHomeAdapter;
 import com.amornchanok.nextstep_app.base.BaseActivity;
 import com.amornchanok.nextstep_app.map.MapsActivity;
 import com.amornchanok.nextstep_app.model.Location;
 import com.amornchanok.nextstep_app.model.Studios;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 

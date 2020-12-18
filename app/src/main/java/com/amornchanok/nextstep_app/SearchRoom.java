@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amornchanok.nextstep_app.StudioHome.StudioHomeActivity;
+import com.amornchanok.nextstep_app.studioHome.StudioHomeActivity;
 
 public class SearchRoom extends AppCompatActivity {
     private Button bt_search;

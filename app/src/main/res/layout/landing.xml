@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        >
+        tools:layout_editor_absoluteY="0dp">
 
     </VideoView>
 
@@ -28,15 +27,15 @@
         android:layout_gravity="center"
         android:src="@drawable/logo" />
 
-    <Button
-        android:id="@+id/bt_start"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/white"
-        android:text="เริ่ม"
-        android:textColor="@color/purple"
-        android:textSize="25dp"></Button>
+<!--    <Button-->
+<!--        android:id="@+id/bt_start"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@color/white"-->
+<!--        android:text="เริ่ม"-->
+<!--        android:textColor="@color/purple"-->
+<!--        android:textSize="25dp"></Button>-->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
