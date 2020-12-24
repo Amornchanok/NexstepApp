@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amornchanok.nextstep_app.searchStudio.SearchRoomActivity;
+import com.amornchanok.nextstep_app.userRegister.UserRegisterActivity;
 
 public class HomeActivity extends AppCompatActivity {
     private Button bt_service1;
@@ -25,9 +25,11 @@ public class HomeActivity extends AppCompatActivity {
                 openSearchroom();
             }
         });
+
+
     }
     public void openSearchroom() {
-        Intent intent = new Intent(HomeActivity.this, SearchRoomActivity.class);
+        Intent intent = new Intent(HomeActivity.this, UserRegisterActivity.class);
         startActivity(intent);
     }
 }

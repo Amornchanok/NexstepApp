@@ -1,5 +1,6 @@
 package com.amornchanok.nextstep_app.studioHome;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +10,10 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.amornchanok.nextstep_app.HomeActivity;
 import com.amornchanok.nextstep_app.R;
-import com.amornchanok.nextstep_app.SearchRoom;
 import com.amornchanok.nextstep_app.model.Studios;
-import com.amornchanok.nextstep_app.searchStudio.SearchRoomActivity;
 import com.amornchanok.nextstep_app.tabProfile.StudioProfileActivity;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -22,9 +21,12 @@ import java.util.ArrayList;
 public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.MyViewHolder> {
 
     private ArrayList<Studios> studios;
+//    private Context mContext;
 
+//    public StudioHomeAdapter(ArrayList<Studios> studios, ValueEventListener mContext) {
     public StudioHomeAdapter(ArrayList<Studios> studios) {
         this.studios = studios;
+//        this.mContext = (Context) mContext;
     }
 
     @Override
@@ -48,8 +50,12 @@ public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.My
     }
 
     public void openProfileStudio() {
-        Intent intent = new Intent( SearchRoom.this,StudioProfileActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent( mContext,StudioProfileActivity.class);
+//        Intent intent = new Intent( StudioProfileActivity.class);
+//        startActivity(intent);
+    }
+
+    private void startActivity(Intent intent) {
     }
 
     @Override

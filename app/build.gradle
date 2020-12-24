@@ -5,6 +5,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
+//    packagingOptions {
+//        exclude 'META-INF/services/javax.annotation.processing.Processor'
+//    }
+
     defaultConfig {
         applicationId "com.amornchanok.nextstep_app"
         minSdkVersion 16
@@ -53,5 +57,6 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-storage:6.4.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
     implementation 'com.google.android.libraries.places:places:1.1.0'
-
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
 }

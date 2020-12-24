@@ -1,5 +1,6 @@
 package com.amornchanok.nextstep_app.studioHome;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -40,7 +41,6 @@ public class StudioHomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-
         databaseReference.child("Studios").addValueEventListener(
                 new ValueEventListener() {
                     @Override
@@ -50,6 +50,7 @@ public class StudioHomeActivity extends AppCompatActivity {
                             studios.add(value);
                         }
                         adapter = new StudioHomeAdapter(studios);
+//                        adapter = new StudioHomeAdapter(studios, this);
                         recyclerView.setAdapter(adapter);
                         Log.d("test", new Gson().toJson(studios));
 

@@ -22,14 +22,14 @@ public class LandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing);
 
-        timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(LandingPage.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        },5000);
+//        timer = new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                Intent intent = new Intent(LandingPage.this, HomeActivity.class);
+//                startActivity(intent);
+//            }
+//        },5000);
 
         vdolanding = (VideoView) findViewById(R.id.vdolanding);
         String path ="android.resource://com.amornchanok.nextstep_app/"+R.raw.vdolanding;

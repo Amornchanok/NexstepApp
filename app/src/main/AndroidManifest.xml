@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.amornchanok.nextstep_app">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.amornchanok.nextstep_app">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -11,6 +10,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -29,22 +29,30 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key" />
-
         <activity android:name=".map.MapsActivity" android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".tabProfile.StudioProfileActivity">
-<!--        <activity android:name=".searchStudio.SearchRoomActivity">-->
+        .userRegister.UserRe
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- <activity android:name=".searchStudio.SearchRoomActivity" android:parentActivityName=".HomeActivity" /> -->
+<!--        <activity android:name=".studioHome.StudioHomeActivity" android:parentActivityName=".searchStudio.SearchRoomActivity" />-->
+<!--        <activity android:name=".HomeActivity"/>-->
 
-        <activity android:name=".studioHome.StudioHomeActivity" android:parentActivityName=".searchStudio.SearchRoomActivity" />
-        <!-- <activity android:name=".ConditionPartner" /> -->
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".searchStudio.SearchRoomActivity"/>
+
+        <activity android:name=".userRegister.LoginActivity"/>
+        <activity android:name=".userRegister.MenuActivity"/>
+        <activity android:name=".userRegister.UserRegisterActivity"/>
+
+
+        <activity android:name=".userRegister.MainActivity"/>
+        <activity android:name=".userRegister.LoginActivity"/>
+<!--        <activity android:name=".userRegister.UserRegisterEmailActivity"/>-->
+        <activity android:name=".tabProfile.StudioProfileActivity"/>
+        <activity android:name=".calendarBooking.CalendarActivity" />
+<!--        <activity android:name=".searchStudio.SearchRoomActivity"/>-->
         <activity android:name=".partnerRegister.PartnerRegisterProfileActivity" />
         <activity android:name=".partnerRegister.PartnerRegisterImageActivity" />
         <activity android:name=".partnerRegister.PartnerRegisterOtpActivity" />

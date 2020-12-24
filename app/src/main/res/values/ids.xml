@@ -4,4 +4,5 @@
     <item name="tab1" type="id" />
     <item name="tab2" type="id" />
     <item name="tab3" type="id" />
+    <item name="edt_birthday" type="id" />
 </resources>

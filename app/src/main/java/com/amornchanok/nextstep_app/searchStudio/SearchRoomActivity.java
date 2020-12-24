@@ -1,6 +1,7 @@
 package com.amornchanok.nextstep_app.searchStudio;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.amornchanok.nextstep_app.map.MapsActivity;
 import com.amornchanok.nextstep_app.model.Location;
 import com.amornchanok.nextstep_app.model.Studios;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -110,12 +112,15 @@ public class SearchRoomActivity extends BaseActivity implements SearchRoom.View 
         rvSearchRoom.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL ,false));
         rvSearchRoom.setItemAnimator(new DefaultItemAnimator());
         adapter = new StudioHomeAdapter(studios);
+//        adapter = new StudioHomeAdapter(studios, (ValueEventListener) this);
         rvSearchRoom.setAdapter(adapter);
     }
 
     @Override
     public void onStudiosFilterSuccess(ArrayList<Studios> studios) {
+        Context mContext = null;
         adapter = new StudioHomeAdapter(studios);
+//        adapter = new StudioHomeAdapter(studios, (ValueEventListener) this);
         rvSearchRoom.setAdapter(adapter);
     }
 }
