@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.amornchanok.nextstep_app.searchStudio.SearchRoomActivity;
 import com.amornchanok.nextstep_app.userRegister.UserRegisterActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.activity_home);
 
         bt_service1 = (Button) findViewById(R.id.bt_service1);
         bt_service1.setOnClickListener(new View.OnClickListener() {
@@ -29,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
 
     }
     public void openSearchroom() {
-        Intent intent = new Intent(HomeActivity.this, UserRegisterActivity.class);
+        Intent intent = new Intent(HomeActivity.this, SearchRoomActivity.class);
         startActivity(intent);
     }
 }

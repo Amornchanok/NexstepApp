@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,12 +22,17 @@ import java.util.ArrayList;
 public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.MyViewHolder> {
 
     private ArrayList<Studios> studios;
-//    private Context mContext;
-
-//    public StudioHomeAdapter(ArrayList<Studios> studios, ValueEventListener mContext) {
+    private static OnItemClickListener mListener;
     public StudioHomeAdapter(ArrayList<Studios> studios) {
         this.studios = studios;
-//        this.mContext = (Context) mContext;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
     }
 
     @Override
@@ -44,18 +50,9 @@ public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.My
         holder.ivPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openProfileStudio();
+
             }
         });
-    }
-
-    public void openProfileStudio() {
-//        Intent intent = new Intent( mContext,StudioProfileActivity.class);
-//        Intent intent = new Intent( StudioProfileActivity.class);
-//        startActivity(intent);
-    }
-
-    private void startActivity(Intent intent) {
     }
 
     @Override
@@ -71,6 +68,18 @@ public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.My
             this.tvName = v.findViewById(R.id.studioname);
             this.tvPrice = v.findViewById(R.id.studioprice);
             this.ivPic = v.findViewById(R.id.studiopic);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mListener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
 
         }
     }

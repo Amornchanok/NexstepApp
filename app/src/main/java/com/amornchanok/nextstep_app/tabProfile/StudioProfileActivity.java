@@ -4,23 +4,41 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.amornchanok.nextstep_app.R;
 import com.amornchanok.nextstep_app.calendarBooking.CalendarActivity;
-import com.amornchanok.nextstep_app.searchStudio.SearchRoomActivity;
 import com.google.android.material.tabs.TabLayout;
+import com.squareup.picasso.Picasso;
+
+import static com.amornchanok.nextstep_app.studioHome.StudioHomeActivity.EXTRA_NAME;
+import static com.amornchanok.nextstep_app.studioHome.StudioHomeActivity.EXTRA_PIC;
 
 public class StudioProfileActivity extends AppCompatActivity {
     Button bt_calendarbook;
+    ImageView imgPreview;
+    TextView stdNname;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.studio_profile);
+        setContentView(R.layout.activity_studio_profile);
+
+        Intent intent = getIntent();
+        String preview = intent.getStringExtra(EXTRA_PIC);
+        String studioname = intent.getStringExtra(EXTRA_NAME);
+
+        ImageView imgPreview = findViewById(R.id.imgPreview);
+        TextView stdName = findViewById(R.id.studioname);
+
+        Picasso.get().load(preview).fit().centerInside().into(imgPreview);
+        stdName.setText(studioname);
+
 
         bt_calendarbook = (Button) findViewById(R.id.bt_calendarbook);
         bt_calendarbook.setOnClickListener(new View.OnClickListener() {

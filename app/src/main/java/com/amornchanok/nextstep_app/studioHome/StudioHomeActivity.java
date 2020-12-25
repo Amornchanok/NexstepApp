@@ -1,6 +1,6 @@
 package com.amornchanok.nextstep_app.studioHome;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -11,16 +11,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
 import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.tabProfile.StudioProfileActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
-
 import java.util.ArrayList;
 
-public class StudioHomeActivity extends AppCompatActivity {
+public class StudioHomeActivity extends AppCompatActivity implements StudioHomeAdapter.OnItemClickListener {
+    public static final String EXTRA_NAME = "studioname";
+    public static final String EXTRA_PIC = "pic";
+
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
     ArrayList <Studios> studios = new ArrayList<>();
@@ -31,7 +34,7 @@ public class StudioHomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.studio_resultlist);
+        setContentView(R.layout.activity_studiolist);
         databaseReference= FirebaseDatabase.getInstance().getReference();
 
         recyclerView = (RecyclerView) findViewById(R.id.listviewtxt);
@@ -40,6 +43,7 @@ public class StudioHomeActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL ,false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
 
         databaseReference.child("Studios").addValueEventListener(
                 new ValueEventListener() {
@@ -50,10 +54,9 @@ public class StudioHomeActivity extends AppCompatActivity {
                             studios.add(value);
                         }
                         adapter = new StudioHomeAdapter(studios);
-//                        adapter = new StudioHomeAdapter(studios, this);
                         recyclerView.setAdapter(adapter);
                         Log.d("test", new Gson().toJson(studios));
-
+//                        adapter.setOnItemClickListener(StudioHomeActivity,this)
                     }
 
                     @Override
@@ -62,6 +65,7 @@ public class StudioHomeActivity extends AppCompatActivity {
                     }
                 }
         );
+
 
 //        databaseReference.addChildEventListener(new ChildEventListener() {
 //            @Override
@@ -94,4 +98,14 @@ public class StudioHomeActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onItemClick(int position) {
+        Intent detailIntent = new Intent(StudioHomeActivity.this, StudioProfileActivity.class);
+        Studios clickedItem = studios.get(position);
+
+        detailIntent.putExtra(EXTRA_PIC, clickedItem.getPic().getPreview());
+        detailIntent.putExtra(EXTRA_NAME, clickedItem.getStudioname());
+
+        startActivity(detailIntent);
+    }
 }
