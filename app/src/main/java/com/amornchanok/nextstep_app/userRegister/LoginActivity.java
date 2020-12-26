@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                                     DatabaseReference DatabaseRefe = FirebaseDatabase.getInstance().getReference().child("users");
                                     databaseReference = DatabaseRefe.child(auth.getCurrentUser().getUid());
                                     databaseReference.child("password").setValue(password);
-                                    Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, UserProfileActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }

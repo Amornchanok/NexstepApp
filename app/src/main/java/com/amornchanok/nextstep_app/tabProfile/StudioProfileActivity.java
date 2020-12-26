@@ -19,7 +19,7 @@ import static com.amornchanok.nextstep_app.studioHome.StudioHomeActivity.EXTRA_N
 import static com.amornchanok.nextstep_app.studioHome.StudioHomeActivity.EXTRA_PIC;
 
 public class StudioProfileActivity extends AppCompatActivity {
-    Button bt_calendarbook;
+    Button btnBooking;
     ImageView imgPreview;
     TextView stdNname;
 
@@ -39,9 +39,8 @@ public class StudioProfileActivity extends AppCompatActivity {
         Picasso.get().load(preview).fit().centerInside().into(imgPreview);
         stdName.setText(studioname);
 
-
-        bt_calendarbook = (Button) findViewById(R.id.bt_calendarbook);
-        bt_calendarbook.setOnClickListener(new View.OnClickListener() {
+        btnBooking = (Button) findViewById(R.id.btnBooking);
+        btnBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openCalendarActivity();

@@ -7,4 +7,7 @@ import com.amornchanok.nextstep_app.model.Partners;
 public class MyApplication extends Application {
     public static Partners partner = new Partners();
     public static String ACTIVITY_RESULT_DATA = "result";
+
+    public static class BookingActivity {
+    }
 }

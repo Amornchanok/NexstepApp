@@ -16,20 +16,27 @@ public class FirebaseManager {
         firebaseRef= FirebaseDatabase.getInstance().getReference();
     }
 
+    private ValueEventListener setListener(final FirebaseCallBacks listener) {
+        return new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                listener.onSuccess(dataSnapshot);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                listener.onFailure();
+            }
+        };
+    }
+
     public synchronized void getStudios(final FirebaseCallBacks listener) {
         listener.onLoading();
-        firebaseRef.child("Studios").addListenerForSingleValueEvent(
-                new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        listener.onSuccess(dataSnapshot);
-                    }
+        firebaseRef.child("Studios").addListenerForSingleValueEvent(setListener(listener));
+    }
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        listener.onFailure();
-                    }
-                }
-        );
+    public synchronized void getStudioById(String id, final FirebaseCallBacks listener) {
+        listener.onLoading();
+        firebaseRef.child("Studios").orderByChild("id").equalTo(id).addListenerForSingleValueEvent(setListener(listener));
     }
 }

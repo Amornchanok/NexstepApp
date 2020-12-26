@@ -30,27 +30,38 @@
         -->
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key" />
         <activity android:name=".map.MapsActivity" android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".studioHome.StudioHomeActivity">
+
+<!--        <activity android:name=".studioHome.StudioHomeActivity">-->
 <!--        <activity android:name=".HomeActivity">-->
+<!--        <activity android:name=".searchStudio.SearchRoomActivity">-->
+<activity android:name=".userRegister.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-<!--        <activity android:name=".HomeActivity"/>-->
+        <activity android:name=".HomeActivity"/>
 
-        <activity android:name=".userRegister.LoginActivity"/>
-        <activity android:name=".userRegister.MenuActivity"/>
+<!--        <activity android:name=".userRegister.LoginActivity"/>-->
+        <activity android:name=".userRegister.UserProfileActivity"/>
         <activity android:name=".userRegister.UserRegisterActivity"/>
-
         <activity android:name=".userRegister.MainActivity"/>
-        <activity android:name=".tabProfile.StudioProfileActivity"/>
+
+        <activity android:name=".studioProfile.StudioProfileActivity"/>
         <activity android:name=".calendarBooking.CalendarActivity" />
-        <activity android:name=".searchStudio.SearchRoomActivity"/>
+<!--        <activity android:name=".searchStudio.SearchRoomActivity"/>-->
         <activity android:name=".partnerRegister.PartnerRegisterProfileActivity" />
         <activity android:name=".partnerRegister.PartnerRegisterImageActivity" />
         <activity android:name=".partnerRegister.PartnerRegisterOtpActivity" />
+        <activity android:name=".tabProfile.StudioProfileActivity"/>
+
+        <activity android:name=".NotiActivity"/>
+        <activity android:name=".BookingActivity"/>
+
+
+
+
     </application>
 
 </manifest>

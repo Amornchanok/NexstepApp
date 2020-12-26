@@ -65,10 +65,10 @@
             android:text=""
             android:textColor="@color/black"
             android:textSize="25dp"
-            android:id="@+id/stdName"/>
+            android:id="@+id/tvStdName"/>
 
         <TextView
-            android:id="@+id/bt_stdbook"
+            android:id="@+id/tvStdRating"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
@@ -80,7 +80,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/studioscore"
+            android:id="@+id/tvStdLocation"
             android:layout_width="16dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -107,7 +107,7 @@
             android:layout_marginTop="10dp"
             android:textSize="20dp"
             android:text="ตารางการจองห้อง"
-            android:id="@+id/bt_calendarbook"
+            android:id="@+id/btnBooking"
             android:background="@drawable/rounded_score">
         </Button>
     </LinearLayout>

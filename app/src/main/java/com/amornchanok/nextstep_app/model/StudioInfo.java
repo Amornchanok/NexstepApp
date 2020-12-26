@@ -3,15 +3,15 @@ package com.amornchanok.nextstep_app.model;
 import java.util.ArrayList;
 
 public class StudioInfo {
-    private ArrayList <Convenient> convenients;
+    private ArrayList <Convenient> convenient;
     private TimeService timeService;
 
-    public ArrayList<Convenient> getConvenients() {
-        return convenients;
+    public ArrayList<Convenient> getConvenient() {
+        return convenient;
     }
 
-    public void setConvenients(ArrayList<Convenient> convenients) {
-        this.convenients = convenients;
+    public void setConvenient(ArrayList<Convenient> convenient) {
+        this.convenient = convenient;
     }
 
     public TimeService getTimeService() {

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
+import com.amornchanok.nextstep_app.studioHome.StudioHomeActivity;
 import com.amornchanok.nextstep_app.studioHome.StudioHomeAdapter;
 import com.amornchanok.nextstep_app.base.BaseActivity;
 import com.amornchanok.nextstep_app.map.MapsActivity;
@@ -38,9 +39,9 @@ public class SearchRoomActivity extends BaseActivity implements SearchRoom.View 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_practice_room);
 
-        initPresenter();
         initViewData();
         initControl();
+        initPresenter();
 
     }
 
@@ -72,15 +73,15 @@ public class SearchRoomActivity extends BaseActivity implements SearchRoom.View 
         btSearch = findViewById(R.id.btSearch);
         btnLoction = findViewById(R.id.btnLoction);
         btnDate = findViewById(R.id.btnDate);
-        btnTime = findViewById(R.id.btnTime);
+//        btnTime = findViewById(R.id.btnTime);
         edtPersons = findViewById(R.id.edtPersons);
         rvSearchRoom = findViewById(R.id.rvSearchRoom);
     }
 
     public void openSearchroomList() {
         presenter.getStudiosFilter(selectLocation.getLatLng());
-//        Intent intent = new Intent(SearchRoomActivity.this, StudioHomeActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(SearchRoomActivity.this, StudioHomeActivity.class);
+        startActivity(intent);
     }
 
     private int CODE_MAPS = 1000;
@@ -111,16 +112,13 @@ public class SearchRoomActivity extends BaseActivity implements SearchRoom.View 
         rvSearchRoom.setHasFixedSize(true);
         rvSearchRoom.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL ,false));
         rvSearchRoom.setItemAnimator(new DefaultItemAnimator());
-        adapter = new StudioHomeAdapter(studios);
-//        adapter = new StudioHomeAdapter(studios, (ValueEventListener) this);
+        adapter = new SearchRoomAdapter(this, studios);
         rvSearchRoom.setAdapter(adapter);
     }
 
     @Override
     public void onStudiosFilterSuccess(ArrayList<Studios> studios) {
-        Context mContext = null;
-        adapter = new StudioHomeAdapter(studios);
-//        adapter = new StudioHomeAdapter(studios, (ValueEventListener) this);
+        adapter = new SearchRoomAdapter(this, studios);
         rvSearchRoom.setAdapter(adapter);
     }
 }

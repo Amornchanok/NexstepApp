@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
 import com.amornchanok.nextstep_app.model.Studios;
-import com.amornchanok.nextstep_app.tabProfile.StudioProfileActivity;
+import com.amornchanok.nextstep_app.studioProfile.StudioProfileActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

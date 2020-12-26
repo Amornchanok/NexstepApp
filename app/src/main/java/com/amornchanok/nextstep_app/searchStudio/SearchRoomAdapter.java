@@ -1,5 +1,8 @@
-package com.amornchanok.nextstep_app.studioHome;
+package com.amornchanok.nextstep_app.searchStudio;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,24 +13,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
 import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.studioHome.StudioHomeActivity;
+import com.amornchanok.nextstep_app.studioProfile.StudioProfileActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.MyViewHolder> {
+import static com.amornchanok.nextstep_app.studioProfile.StudioProfileActivity.INTENT_STUDIO_ID;
+
+public class SearchRoomAdapter extends RecyclerView.Adapter<SearchRoomAdapter.MyViewHolder> {
 
     private ArrayList<Studios> studios;
-    private static OnItemClickListener mListener;
-    public StudioHomeAdapter(ArrayList<Studios> studios) {
+    private Activity activity;
+
+    public SearchRoomAdapter(Activity activity , ArrayList<Studios> studios) {
         this.studios = studios;
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
-
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        mListener = listener;
+        this.activity =activity;
     }
 
     @Override
@@ -38,14 +39,18 @@ public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.My
     @Override
     public void onBindViewHolder( MyViewHolder holder, int position) {
 
-        holder.tvName.setText(studios.get(position).getStudioname());
-        holder.tvPrice.setText(studios.get(position).getPrice() + " บาท / ชั่วโมง" .toString());
-        Picasso.get().load(studios.get(position).getPic().getPreview()).into(holder.ivPic);
+        final Studios studio = studios.get(position);
+
+        holder.tvName.setText(studio.getStudioname());
+        holder.tvPrice.setText(studio.getPrice() + " บาท / ชั่วโมง" );
+        Picasso.get().load(studio.getPic().getPreview()).into(holder.ivPic);
 
         holder.ivPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(activity, StudioProfileActivity.class);
+                intent.putExtra(INTENT_STUDIO_ID,studio.getId());
+                activity.startActivity(intent);
             }
         });
     }
@@ -63,18 +68,6 @@ public class StudioHomeAdapter extends RecyclerView.Adapter<StudioHomeAdapter.My
             this.tvName = v.findViewById(R.id.studioname);
             this.tvPrice = v.findViewById(R.id.studioprice);
             this.ivPic = v.findViewById(R.id.studiopic);
-
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            mListener.onItemClick(position);
-                        }
-                    }
-                }
-            });
 
         }
     }
