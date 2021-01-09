@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+
     <TextView
+        android:id="@+id/text_user_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="หน้าจองแล้ว"/>
+        android:text="text_user_id"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
 
-    <Button
+
+    <ProgressBar
+        android:visibility="visible"
+        android:id="@+id/imageProgressBar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bt_book"
-        android:background="@color/purple"
-        android:text="ยกเลิก"/>
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewId"
+        android:layout_width="match_parent"
+        android:layout_height="606dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,5 +44,6 @@
             android:layout_alignParentBottom="true"/>
 
     </RelativeLayout>
+
 
 </LinearLayout>

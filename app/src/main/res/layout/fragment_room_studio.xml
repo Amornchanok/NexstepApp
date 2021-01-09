@@ -13,6 +13,6 @@
         android:layout_marginRight="25dp"
         android:textSize="25dp"
         android:textColor="@color/black"
-        android:text="ห้อง" />
+        android:text="" />
 
 </FrameLayout>

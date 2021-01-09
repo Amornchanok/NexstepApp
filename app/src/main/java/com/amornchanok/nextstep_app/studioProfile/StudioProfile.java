@@ -1,9 +1,6 @@
 package com.amornchanok.nextstep_app.studioProfile;
 
-import com.amornchanok.nextstep_app.model.Studios;
-import com.google.android.gms.maps.model.LatLng;
-
-import java.util.ArrayList;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 
 interface StudioProfile {
 

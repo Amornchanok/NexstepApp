@@ -130,11 +130,11 @@
             android:text="ข้อมูล"
             android:id="@+id/tabInfo"/>
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ห้อง"
-            android:id="@+id/tabRoom"/>
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="ห้อง"-->
+<!--            android:id="@+id/tabRoom"/>-->
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

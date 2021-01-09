@@ -43,7 +43,8 @@ public class PartnerConditionActivity extends AppCompatActivity {
         });
     }
     public void openPartnerRegister() {
-        Intent intentReg = new Intent(PartnerConditionActivity.this, PartnerRegisterProfileActivity.class);
+//        Intent intentReg = new Intent(PartnerConditionActivity.this, PartnerRegisterProfileActivity.class);
+        Intent intentReg = new Intent(PartnerConditionActivity.this, PartnerChangeMode.class);
         startActivity(intentReg);
     }
 }

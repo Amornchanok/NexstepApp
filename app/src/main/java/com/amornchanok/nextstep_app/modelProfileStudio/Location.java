@@ -1,4 +1,4 @@
-package com.amornchanok.nextstep_app.model;
+package com.amornchanok.nextstep_app.modelProfileStudio;
 
 import com.google.android.gms.maps.model.LatLng;
 

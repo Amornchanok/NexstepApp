@@ -4,8 +4,7 @@ import android.util.Log;
 
 import com.amornchanok.nextstep_app.firebase.FirebaseCallBacks;
 import com.amornchanok.nextstep_app.firebase.FirebaseManager;
-import com.amornchanok.nextstep_app.model.Studios;
-import com.amornchanok.nextstep_app.searchStudio.SearchRoomActivity;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 import com.google.firebase.database.DataSnapshot;
 
 public class StudioProfilePresenter implements StudioProfile.Presenter {

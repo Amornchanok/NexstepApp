@@ -1,7 +1,6 @@
 package com.amornchanok.nextstep_app.searchStudio;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
-import com.amornchanok.nextstep_app.model.Studios;
-import com.amornchanok.nextstep_app.studioHome.StudioHomeActivity;
-import com.amornchanok.nextstep_app.studioProfile.StudioProfileActivity;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -48,7 +45,8 @@ public class SearchRoomAdapter extends RecyclerView.Adapter<SearchRoomAdapter.My
         holder.ivPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, StudioProfileActivity.class);
+               // Intent intent = new Intent(activity, StudioProfileActivity.class);
+                Intent intent = new Intent(activity, Detail.class);
                 intent.putExtra(INTENT_STUDIO_ID,studio.getId());
                 activity.startActivity(intent);
             }

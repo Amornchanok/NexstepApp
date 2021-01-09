@@ -44,9 +44,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-
-
-
         inputEmail = (EditText) findViewById(R.id.input_email);
         inputPassword = (EditText) findViewById(R.id.input_password);
 
@@ -76,12 +73,12 @@ public class LoginActivity extends AppCompatActivity {
                 final String password = inputPassword.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Email adresinizi girin!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "กรุณากรอกอีเมล", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Şifrenizi girin!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "กรุณากรอกรหัสผ่าน", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -99,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                                     // there was an error
                                     Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                 } else {
-                                    DatabaseReference DatabaseRefe = FirebaseDatabase.getInstance().getReference().child("users");
+                                    DatabaseReference DatabaseRefe = FirebaseDatabase.getInstance().getReference().child("Users");
                                     databaseReference = DatabaseRefe.child(auth.getCurrentUser().getUid());
                                     databaseReference.child("password").setValue(password);
                                     Intent intent = new Intent(LoginActivity.this, UserProfileActivity.class);

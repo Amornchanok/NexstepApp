@@ -55,7 +55,7 @@ public class StudioProfileActivity extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabBar);
         TabLayout tabInfo = findViewById(R.id.tabInfo);
-        TabLayout tabRoom = findViewById(R.id.tabRoom);
+//        TabLayout tabRoom = findViewById(R.id.tabRoom);
         TabLayout tabReview = findViewById(R.id.tabReview);
         final ViewPager viewPager = findViewById(R.id.viewPager);
 

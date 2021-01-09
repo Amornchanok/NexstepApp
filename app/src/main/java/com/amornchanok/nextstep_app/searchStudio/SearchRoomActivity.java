@@ -1,7 +1,6 @@
 package com.amornchanok.nextstep_app.searchStudio;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,20 +12,19 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amornchanok.nextstep_app.StudioListActivity;
 import com.amornchanok.nextstep_app.R;
 import com.amornchanok.nextstep_app.studioHome.StudioHomeActivity;
-import com.amornchanok.nextstep_app.studioHome.StudioHomeAdapter;
 import com.amornchanok.nextstep_app.base.BaseActivity;
 import com.amornchanok.nextstep_app.map.MapsActivity;
-import com.amornchanok.nextstep_app.model.Location;
-import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.modelProfileStudio.Location;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class SearchRoomActivity extends BaseActivity implements SearchRoom.View {
-    private Button btSearch,btnLoction,btnDate,btnTime;
+    private Button btSearch,btnLoction,btnDate,btnTime,btnAllStudio;
     private EditText edtPersons;
     private RecyclerView rvSearchRoom;
     private SearchRoomPresenter presenter;
@@ -37,7 +35,7 @@ public class SearchRoomActivity extends BaseActivity implements SearchRoom.View 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_practice_room);
+        setContentView(R.layout.activity_search_room);
 
         initViewData();
         initControl();
@@ -76,6 +74,16 @@ public class SearchRoomActivity extends BaseActivity implements SearchRoom.View 
 //        btnTime = findViewById(R.id.btnTime);
         edtPersons = findViewById(R.id.edtPersons);
         rvSearchRoom = findViewById(R.id.rvSearchRoom);
+
+        btnAllStudio = (Button) findViewById(R.id.btnAllStudio);
+        btnAllStudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(SearchRoomActivity.this, StudioListActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     public void openSearchroomList() {

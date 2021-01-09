@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.amornchanok.nextstep_app.R;
-import com.amornchanok.nextstep_app.model.Convenient;
-import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.modelProfileStudio.Convenient;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 
 public class InfoStudioFragment extends Fragment {
 

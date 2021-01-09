@@ -7,19 +7,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.amornchanok.nextstep_app.R;
 import com.amornchanok.nextstep_app.base.BaseActivity;
 import com.amornchanok.nextstep_app.calendarBooking.CalendarActivity;
-import com.amornchanok.nextstep_app.model.Studios;
-import com.amornchanok.nextstep_app.searchStudio.SearchRoomPresenter;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 import com.google.android.material.tabs.TabLayout;
 import com.squareup.picasso.Picasso;
-
-import static com.amornchanok.nextstep_app.studioHome.StudioHomeActivity.EXTRA_NAME;
-import static com.amornchanok.nextstep_app.studioHome.StudioHomeActivity.EXTRA_PIC;
 
 public class StudioProfileActivity extends BaseActivity implements StudioProfile.View{
 
@@ -87,7 +82,7 @@ public class StudioProfileActivity extends BaseActivity implements StudioProfile
         btnBooking = findViewById(R.id.btnBooking);
         tabLayout = findViewById(R.id.tabBar);
         tabInfo = findViewById(R.id.tabInfo);
-        tabRoom = findViewById(R.id.tabRoom);
+//        tabRoom = findViewById(R.id.tabRoom);
         tabReview = findViewById(R.id.tabReview);
         viewPager = findViewById(R.id.viewPager);
     }

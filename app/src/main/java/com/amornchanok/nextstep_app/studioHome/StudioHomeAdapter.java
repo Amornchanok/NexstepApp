@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
-import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

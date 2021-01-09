@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.amornchanok.nextstep_app.R;
+import com.amornchanok.nextstep_app.partnerRegister.PartnerConditionActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -50,10 +51,10 @@ public class UserRegisterActivity extends AppCompatActivity {
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
-         inputName =(EditText)findViewById(R.id.registerName);
-         inputLastName= (EditText)findViewById(R.id.registerLastName);
+        inputName =(EditText)findViewById(R.id.registerName);
+        inputLastName= (EditText)findViewById(R.id.registerLastName);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-       // btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
+//      btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
 //        btnResetPassword.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -102,7 +103,6 @@ public class UserRegisterActivity extends AppCompatActivity {
                 }
 
                 progressBar.setVisibility(View.VISIBLE);
-                //Kullanıcı oluştur
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(UserRegisterActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -118,6 +118,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                                     databaseReference.child("lastName").setValue(lastName);
                                     databaseReference.child("email").setValue(email);
                                     databaseReference.child("password").setValue(password);
+                                    databaseReference.child("userType").setValue("isUser");
                                     // databaseReference.child("default").setValue("default");
 
 
@@ -130,6 +131,18 @@ public class UserRegisterActivity extends AppCompatActivity {
                                 }
                             }
                         });
+
+                Button sign_in_button = (Button) findViewById(R.id.sign_in_button);
+                sign_in_button.setOnClickListener(new View.OnClickListener() {
+
+                    public void onClick(View V) {
+
+                        Intent login = new Intent(UserRegisterActivity.this, LoginActivity.class);
+                        startActivity(login);
+                    }
+
+
+                });
 
             }
         });

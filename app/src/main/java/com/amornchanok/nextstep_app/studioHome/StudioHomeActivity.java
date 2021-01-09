@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
-import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 import com.amornchanok.nextstep_app.studioProfile.StudioProfileActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

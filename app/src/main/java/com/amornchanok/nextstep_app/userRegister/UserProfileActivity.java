@@ -17,7 +17,7 @@ import com.amornchanok.nextstep_app.BookingActivity;
 import com.amornchanok.nextstep_app.HomeActivity;
 import com.amornchanok.nextstep_app.NotiActivity;
 import com.amornchanok.nextstep_app.R;
-import com.firebase.ui.auth.User;
+import com.amornchanok.nextstep_app.partnerRegister.PartnerConditionActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -72,6 +72,27 @@ public class UserProfileActivity extends AppCompatActivity {
             }
         });
 
+//        Button b_next_1 = (Button) findViewById(R.id.b_next_1);
+//        b_next_1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent i = new Intent(UserProfileActivity.this, Page_studio.class);
+//                startActivity(i);
+//            }
+//        });
+
+//        Button b_next_2 = (Button) findViewById(R.id.b_next_2);
+//        b_next_2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent i = new Intent(UserProfileActivity.this, BookingActivity.class);
+//                startActivity(i);
+//            }
+//        });
+
+
 
         Button b_action_1 = (Button) findViewById(R.id.b_action_1);
         b_action_1.setOnClickListener(new View.OnClickListener() {
@@ -89,12 +110,21 @@ public class UserProfileActivity extends AppCompatActivity {
 
         });
 
+        Button btnPartnerMode = (Button) findViewById(R.id.btnPartnerMode);
+        btnPartnerMode.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View V) {
+
+                Intent partnerMode = new Intent(UserProfileActivity.this, PartnerConditionActivity.class);
+                startActivity(partnerMode);
+            }
+
+        });
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         userID = firebaseUser.getUid();
         text_user_id = (TextView) findViewById(R.id.text_user_id);
         text_user_id.setText("" + userID);
-
 
     }
 }

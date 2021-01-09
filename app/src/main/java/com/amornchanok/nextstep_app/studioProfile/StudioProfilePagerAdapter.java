@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.amornchanok.nextstep_app.model.Studios;
+import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
 import com.amornchanok.nextstep_app.studioProfile.tab.InfoStudioFragment;
 import com.amornchanok.nextstep_app.studioProfile.tab.ReviewStudioFragment;
 import com.amornchanok.nextstep_app.studioProfile.tab.RoomStudioFragment;
