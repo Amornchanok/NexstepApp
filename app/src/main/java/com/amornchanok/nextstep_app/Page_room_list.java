@@ -36,11 +36,11 @@ public class Page_room_list extends AppCompatActivity {
 
         if (getIntent() != null)
 
-        Category_id = getIntent().getStringExtra("categoryid");
+        Category_id = getIntent().getStringExtra("categoryId");
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Room").orderByChild("MenuId").equalTo(Category_id);
         optionsproducts = new FirebaseRecyclerOptions.Builder<Products>().setQuery(databaseReference, Products.class).build();
 
-        recyclerView = (RecyclerView) findViewById(R.id.food_list);
+        recyclerView = (RecyclerView) findViewById(R.id.room_list);
         recyclerView.setHasFixedSize(true);
 
         if (!Category_id.isEmpty() && Category_id != null) {
@@ -58,17 +58,16 @@ public class Page_room_list extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             //Intent i=new Intent(Page_room_list.this,Page_room_detail.class);
-                            Intent i=new Intent(Page_room_list.this,Page_room_detail_2.class);
+                            Intent i=new Intent(Page_room_list.this, Page_room_detail.class);
 
                             i.putExtra("Category_id",Category_id);
-
-                            i.putExtra("Foodid",model.getID());
-                            i.putExtra("FoodName",model.getName());
-                            i.putExtra("FoodDescribtion",model.getDescription());
-                           // i.putExtra("FoodPrice",model.getPrice());
-                           // i.putExtra("FoodQuantity",model.getQuantity());
-                            i.putExtra("FoodImage",model.getImage());
-                            Toast.makeText(getApplicationContext(),model.getName()+" Food",Toast.LENGTH_LONG).show();
+                            i.putExtra("roomId",model.getID());
+                            i.putExtra("roomName",model.getName());
+                            i.putExtra("roomDescribtion",model.getDescription());
+                           // i.putExtra("RoomPrice",model.getPrice());
+                           // i.putExtra("RoomQuantity",model.getQuantity());
+                            i.putExtra("roodImage",model.getImage());
+//                            Toast.makeText(getApplicationContext(),model.getName(),Toast.LENGTH_LONG).show();
                             startActivity(i);
                         }
                     });

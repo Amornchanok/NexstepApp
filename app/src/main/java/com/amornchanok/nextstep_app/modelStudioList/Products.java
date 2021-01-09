@@ -56,8 +56,7 @@ public class Products {
         return MenuId;
     }
 
-    public void setMenuId(String MenuId) {
-        this.MenuId = MenuId;}
+    public void setMenuId(String MenuId) { this.MenuId = MenuId;}
 
 
 }

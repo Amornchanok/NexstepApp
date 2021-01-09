@@ -45,8 +45,8 @@
         <activity android:name=".Page_firebase_show_img_100"/>
         <activity android:name=".Page_detail"/>
         <activity android:name=".Page_room_list"/>
+        <activity android:name=".Page_room_detail_order"/>
         <activity android:name=".Page_room_detail"/>
-        <activity android:name=".Page_room_detail_2"/>
         <activity android:name=".StudioListActivity"/>
         <activity android:name=".BookingActivity"/>
 

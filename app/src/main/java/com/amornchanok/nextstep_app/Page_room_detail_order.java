@@ -1,7 +1,6 @@
 package com.amornchanok.nextstep_app;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amornchanok.nextstep_app.modelStudioList.Order;
+
+import com.amornchanok.nextstep_app.modelStudioList.Booking;
 import com.firebase.client.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,34 +23,38 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Page_room_detail_2 extends AppCompatActivity {
+public class Page_room_detail_order extends AppCompatActivity {
+    TextView room_name, room_description, room_price, room_quantity;
+    ImageView room_image;
+    // CollapsingToolbarLayout collapsingToolbarLayout;
+    //FloatingActionButton btnCart;
+    //  ElegantNumberButton numberButton;
+    private String userid;
 
 
-    TextView text_Category_id;
-    TextView text_id;
-    TextView text_name;
-    TextView text_url;
-    TextView text_describtion;
+    String roompricestr, roomquantitystr, roomnamestr, roomid, roomdescriptionstr;
+    int roompriceint, roomquantityint;
 
 
-    ImageView imageView;
-Button b_next_1;
-String s_url;
+
+    Button b_next_1;
+
+
 
     // Declaring String variable ( In which we are storing firebase server URL ).
     public static final String Firebase_Server_URL = "https://nextstepapp-740cf.firebaseio.com/";
 
     // Declaring String variables to store name & phone number get from EditText.
     String categoryid;
-    String s_food_name;
-    String s_food_image;
+    String s_room_name;
+    String s_room_image;
 
     Firebase firebase;
 
     DatabaseReference databaseReference;
 
     // Root Database Name for Firebase Database.
-    public static final String Database_Path = "Order";
+    public static final String Database_Path = "Booking";
 
 
     ////////////////////////////////////////////////////////
@@ -59,59 +63,49 @@ String s_url;
     TextView text_user_id;
     ////////////////////////////////////////////////////////
     public String currentDate,currenttime;
-    String foodid;
     @Override
-    protected void onCreate(Bundle saveInstanceState) {
-        super.onCreate(saveInstanceState);
-        setContentView(R.layout.page_room_detail_2);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.page_room_detail_order);
 ///////////////////////////////////////////////////////////////////////////////////////
-        Firebase.setAndroidContext(Page_room_detail_2.this);
+        Firebase.setAndroidContext(Page_room_detail_order.this);
         firebase = new Firebase(Firebase_Server_URL);
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
 
-        ///////////////////////////////////////////////////////////
+
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         userID = firebaseUser.getUid();
-        /////////////////////////////////////////////////////////
-       imageView = (ImageView) findViewById(R.id.imageView);
-
-
-//        text_Category_id = (TextView) findViewById(R.id.text_Category_id);
-//        text_id = (TextView) findViewById(R.id.text_id);
-        text_name = (TextView) findViewById(R.id.text_name);
-        text_describtion = (TextView) findViewById(R.id.text_describtion);
-        text_url = (TextView) findViewById(R.id.text_url);
-
-
-        Intent intent = getIntent();
-        //String s_id = intent.getStringExtra("id");
-        //String s_id = intent.getStringExtra(INTENT_STUDIO_ID);
-
-        String s_Category_id = intent.getStringExtra("Category_id");
-        String s_id= intent.getStringExtra("Foodid");
-        String s_name = intent.getStringExtra("FoodName");
-        String s_FoodDescribtion = intent.getStringExtra("FoodDescribtion");
-        s_url = intent.getStringExtra("FoodImage");
 
 
 
-        text_Category_id.setText("" + s_Category_id);
-        text_id.setText("" + s_id);
-        text_url.setText("" + s_url);
-        text_name.setText("" + s_name);
-        text_describtion.setText("" + s_FoodDescribtion);
+        // btnCart=(FloatingActionButton)findViewById(R.id.btncart);
+        room_name = (TextView) findViewById(R.id.room_name);
+        room_description = (TextView) findViewById(R.id.room_description);
+        room_price = (TextView) findViewById(R.id.room_price);
+        room_quantity = (TextView) findViewById(R.id.room_Quantity);
 
-        Picasso.get()
-                //.load(get(s_url).getI_url())
-                .load("" + s_url)
-                .placeholder(R.mipmap.ic_launcher)
-                .fit()
-                .centerCrop()
-                .into(imageView);
-
+        room_image = (ImageView) findViewById(R.id.img_room);
+        //collapsingToolbarLayout=(CollapsingToolbarLayout)findViewById(R.id.collapsing);
+        //collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppbar);
+        //collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapsedAppbar);
         categoryid=getIntent().getStringExtra("Category_id");
-        foodid=getIntent().getStringExtra("Foodid");
-        s_food_image=getIntent().getStringExtra("FoodImage");
+        roomid=getIntent().getStringExtra("roomId");
+        s_room_image=getIntent().getStringExtra("roomImage");
+
+        if (getIntent() != null) {
+            roompricestr = getIntent().getStringExtra("RoomPrice");
+            roomquantitystr = getIntent().getStringExtra("RoomQuantity");
+            roomdescriptionstr = getIntent().getStringExtra("RoomDescribtion");
+            room_name.setText("Name: " + getIntent().getStringExtra("FoodName"));
+            room_description.setText("Description: " + getIntent().getStringExtra("RoomDescribtion"));
+            room_price.setText("Price = " + getIntent().getStringExtra("RoomPrice"));
+            room_quantity.setText("Quantity: " + getIntent().getStringExtra("RoomQuantity"));
+            Picasso.get().load(getIntent().getStringExtra("FoodImage")).into(room_image);
+            //   foodnamestr=food_name.getText().toString();
+            //  collapsingToolbarLayout.setTitle(foodnamestr);
+        }
+        roompriceint = Integer.parseInt(roompricestr);
+        roomquantityint = Integer.parseInt(roomquantitystr);
 
 
         b_next_1 = (Button) findViewById(R.id.b_next_1);
@@ -119,7 +113,7 @@ String s_url;
             @Override
             public void onClick(View view) {
 
-                Order data_input = new Order();
+                Booking data_input = new Booking();
 
                 GetDataFromText();
 
@@ -128,17 +122,16 @@ String s_url;
                 SimpleDateFormat format=new SimpleDateFormat("HH:mm:ss");
                 currenttime=format.format(calendar.getTime());
                 // String yalhwy=String.valueOf(totalprice);
-//
+
 
 
 
                 // Adding name into class function object.
                 data_input.setCategory_id(categoryid);
-                data_input.setProduct_id(foodid);
-                data_input.setProduct_name(s_food_name);
-                data_input.setProduct_img(s_food_image);
+                data_input.setRoom_id(roomid);
+                data_input.setRoom_name(s_room_name);
+                data_input.setRoom_img(s_room_image);
                 data_input.setUser_id(userID);
-
                 data_input.setDate(currentDate);
                 data_input.setTime(currenttime);
 
@@ -160,7 +153,7 @@ String s_url;
                 databaseReference.child(StudentRecordIDFromServer).setValue(data_input);
 
                 // Showing Toast message after successfully data submit.
-                Toast.makeText(Page_room_detail_2.this, "Data Inserted Successfully into Firebase Database", Toast.LENGTH_LONG).show();
+                Toast.makeText(Page_room_detail_order.this, "บันทึกการจองแล้ว!", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -168,7 +161,7 @@ String s_url;
 
     public void GetDataFromText() {
 
-        s_food_name = text_name.getText().toString().trim();
+        s_room_name = room_name.getText().toString().trim();
 
         // NumberHolder = editText_number.getText().toString().trim();
 

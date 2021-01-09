@@ -14,18 +14,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.amornchanok.nextstep_app.modelStudioList.MyOrder;
+import com.amornchanok.nextstep_app.modelStudioList.MyBooking;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyViewHolder> {
     private Context context;
-    private List<MyOrder> uploadList;
+    private List<MyBooking> uploadList;
     private onItemClickListener listener;
 
 
-    public MyOrderAdapter(Context context, List<MyOrder> uploadList) {
+    public MyOrderAdapter(Context context, List<MyBooking> uploadList) {
         this.context = context;
         this.uploadList = uploadList;
     }
@@ -40,12 +40,12 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        holder.imageNameTextView.setText(uploadList.get(position).getProduct_name());
+        holder.imageNameTextView.setText(uploadList.get(position).getRoom_name());
         holder.text_date.setText(uploadList.get(position).getDate());
         holder.text_time.setText(uploadList.get(position).getTime());
         // Picasso.with(context)
 
-        Picasso.get().load(uploadList.get(position).getProduct_img()).placeholder(R.mipmap.ic_launcher).fit().centerCrop().into(holder.imageView);
+        Picasso.get().load(uploadList.get(position).getRoom_img()).placeholder(R.mipmap.ic_launcher).fit().centerCrop().into(holder.imageView);
 
 
 

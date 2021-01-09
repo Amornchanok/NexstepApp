@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.amornchanok.nextstep_app.modelStudioList.MyOrder;
+import com.amornchanok.nextstep_app.modelStudioList.MyBooking;
 import com.amornchanok.nextstep_app.userRegister.UserProfileActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -45,7 +45,7 @@ public class BookingActivity extends AppCompatActivity {
     ////////////////////////////////////
     DatabaseReference databaseReference;
     MyOrderAdapter myAdapter;
-    List<MyOrder> uploadList;
+    List<MyBooking> uploadList;
     RecyclerView recyclerView;
     ProgressBar progressBar;
     FirebaseStorage firebaseStorage;
@@ -106,18 +106,18 @@ public class BookingActivity extends AppCompatActivity {
         firebaseStorage= FirebaseStorage.getInstance();
 
         //databaseReference= FirebaseDatabase.getInstance().getReference("Studios2");
-        //databaseReference= FirebaseDatabase.getInstance().getReference("Order");
-        // databaseReference= FirebaseDatabase.getInstance().getReference().child(userid).child("Order");
-        databaseReference= FirebaseDatabase.getInstance().getReference("Order");
+        //databaseReference= FirebaseDatabase.getInstance().getReference("Booking");
+        // databaseReference= FirebaseDatabase.getInstance().getReference().child(userid).child("Booking");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Booking");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //duplicate value remove
                 uploadList.clear();
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
-                    MyOrder upload=dataSnapshot.getValue(MyOrder.class);
+                    MyBooking upload=dataSnapshot.getValue(MyBooking.class);
                     assert upload != null;
-                    upload.setProduct_id(dataSnapshot.getKey());
+                    upload.setRoom_id(dataSnapshot.getKey());
                     uploadList.add(upload);
                 }
                 myAdapter=new MyOrderAdapter(BookingActivity.this,uploadList);

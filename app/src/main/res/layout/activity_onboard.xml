@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OnboardActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slideViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="773dp"
+        tools:ignore="UnknownId">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_below="@id/slideViewPager">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btBack"
+        android:text="NEXT"/>
+
+
+</RelativeLayout>

@@ -56,7 +56,7 @@ public class StudioListActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent i = new Intent(StudioListActivity.this, Page_room_list.class);
                         // Intent i=new Intent(Categorylist.this,Show_list.class);
-                        i.putExtra("categoryid", model.getID());
+                        i.putExtra("categoryId", model.getID());
                         Toast.makeText(getApplicationContext(), model.getName(), Toast.LENGTH_LONG).show();
                         startActivity(i);
                     }

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amornchanok.nextstep_app.R;
 import com.amornchanok.nextstep_app.modelProfileStudio.Studios;
+import com.amornchanok.nextstep_app.studioProfile.StudioProfileActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -45,8 +46,7 @@ public class SearchRoomAdapter extends RecyclerView.Adapter<SearchRoomAdapter.My
         holder.ivPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(activity, StudioProfileActivity.class);
-                Intent intent = new Intent(activity, Detail.class);
+                Intent intent = new Intent(activity, StudioProfileActivity.class);
                 intent.putExtra(INTENT_STUDIO_ID,studio.getId());
                 activity.startActivity(intent);
             }
